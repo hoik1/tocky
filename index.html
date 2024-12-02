@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- zalozky -->
+     <div id="tabs">
+        <div class="tab active" data-tab="profile">Profil</div>
+        <div class="tab" data-tab="slot-machine">Automat</div>
+        <div class="tab" data-tab="settings">Nastavení</div>
+     </div>
+
+     <div id="profile" class="tab-content">
+        <h1>Profil</h1>
+        <p>Prostředky: <strong id="balance" style="cursor: pointer;">1000</strong> Kč</p>
+        <p>Klikněte na prostředky pro úpravu.</p>
+      </div>
+
+     <div id="slot-machine" class="tab-content active">
+        <h1>Točky</h1>
+        <p>Aktualni sazka: <span id="current-bet">10</span>Kc</p>
+        <label for="bet">Zmenit sazku: </label>
+        <input type="number" id="bet" min="1" value="10">
+        <button id="set-bet">Nastavit sazku:</button>
+         <button id="all-in-button">All In</button>
+
+        
+
+        <div id="reels">
+         <div class="reel" id="reel1">🍒</div>
+         <div class="reel" id="reel2">🚸</div>
+         <div class="reel" id="reel3">🧙‍♂️</div>
+        </div>
+        <button id="spin-button">Tocit</button>
+        <div id="result"></div>
+     </div>
+
+     <div id="overlay"></div>
+
+     <div id="settings" class="tab-content">
+        <h1>Nastavení</h1>
+        <p>Soucet procent jednotlivych symbolu musi byt 100%</p>
+        <label>Tresne: <input type="number" id="cherry-prob" value="50"></label><br>
+        <label>Citron: <input type="number" id="lemon-prob" value="30"></label><br>
+        <label>Meloun: <input type="number" id="watermelon-prob" value="20"></label><br>
+        <button id="save-settings">Ulozit nastaveni</button>
+     </div>
+
+     <script src="app.js"></script>
+
+</body>
+</html>
